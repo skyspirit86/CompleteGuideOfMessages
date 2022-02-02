@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="PNContentExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="287"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fma-Bb-ISR">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fma-Bb-ISR" secondAttribute="height" multiplier="323:210" id="7kn-o4-Gdf"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v80-Wh-I77">
+                                <rect key="frame" x="86.5" y="232" width="150" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="pAD-uc-QRt"/>
+                                    <constraint firstAttribute="width" constant="150" id="xpv-TK-ODG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Direction"/>
+                                <connections>
+                                    <action selector="tapDirectionButton:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="RQi-Au-5UP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                        <color key="backgroundColor" red="0.45882353186607361" green="0.74901962280273438" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fma-Bb-ISR" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="GA7-qd-oWc"/>
+                            <constraint firstItem="v80-Wh-I77" firstAttribute="centerX" secondItem="2BE-c3-nQJ" secondAttribute="centerX" id="Zaa-wT-eWt"/>
+                            <constraint firstItem="fma-Bb-ISR" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="iKj-bh-3GD"/>
+                            <constraint firstItem="fma-Bb-ISR" firstAttribute="trailing" secondItem="2BE-c3-nQJ" secondAttribute="trailing" id="oCi-b1-4a8"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="v80-Wh-I77" secondAttribute="bottom" constant="20" id="zPd-jQ-fEl"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="323" height="287"/>
+                    <connections>
+                        <outlet property="directionButton" destination="v80-Wh-I77" id="Cy9-Ba-DCc"/>
+                        <outlet property="mapUI" destination="fma-Bb-ISR" id="7yL-Oc-GNU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142.75362318840581" y="179.12946428571428"/>
+        </scene>
+    </scenes>
+</document>
